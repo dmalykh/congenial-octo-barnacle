@@ -1,17 +1,15 @@
 resource "lab" "main" {
-  title       = "Skeleton Lab"
-  description = "This is the Skeleton Lab.\nYou can use this as a minimal starting point for developing labs.\n\nFor more information, check ./assets/README.md"
+  title = "My Web Server Lab"
+  description = "Learn web server basics by customizing an nginx homepage"
+  layout = resource.layout.two_column
 
-  settings {
-    timelimit {
-      duration = "1h"
-    }
+  content {
+    chapter "getting_started" {
+      title = "Getting Started with Web Servers"
 
-    idle {
-      enabled = true
-      timeout = "15m"
+      page "customize_homepage" {
+        reference = resource.page.customize_homepage
+      }
     }
   }
-
-  layout = resource.layout.single_panel
 }
