@@ -5,7 +5,7 @@ resource "lab" "main" {
 
   content {
     chapter "getting_started" {
-      title = "Getting Started with Web Servers"
+      title = "Getting Started with Web Servers!"
 
       page "customize_homepage" {
         reference = resource.page.customize_homepage
