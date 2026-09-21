@@ -10,7 +10,7 @@ resource "container" "webserver" {
   }
 
   port {
-    local = 80    # Port inside the container
+    local = 80 # Port inside the container
   }
 
   # Resource chaining - connect to network

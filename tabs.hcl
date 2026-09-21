@@ -8,5 +8,5 @@ resource "service" "webserver" {
 # Terminal tab - provides command-line access
 resource "terminal" "shell" {
   target = resource.container.webserver
-  shell = "/bin/bash"
+  shell  = "/bin/bash"
 }
