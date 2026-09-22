@@ -16,14 +16,19 @@ HTML (HyperText Markup Language) uses tags to structure content. You can add tex
 
 ## Editing Files on a Server
 
-You can edit files directly on the server using command-line text editors like `nano` or `vi`. The `nano` editor is beginner-friendly:
+Minimal container images like nginx ship without a text editor, so you change files with shell commands instead. In the Terminal tab, replace the homepage with your own message:
 
-- Navigate with arrow keys
-- `Ctrl + X` to exit
-- `Y` to save changes
-- `Enter` to confirm the filename
+```bash
+echo '<h1>Hello from my web server!</h1>' > /usr/share/nginx/html/index.html
+```
 
-To see your changes, refresh your browser or the Service tab after editing the file.
+Verify your change with `cat`:
+
+```bash
+cat /usr/share/nginx/html/index.html
+```
+
+To see your changes, refresh your browser or the Service tab.
 
 <instruqt-task id="edit_homepage"></instruqt-task>
 
@@ -38,3 +43,7 @@ To see your changes, refresh your browser or the Service tab after editing the f
 
 - Force refresh the Service tab (Ctrl+F5 or Cmd+Shift+R)
 - Wait a few seconds and refresh again
+
+## Finish the Lab
+
+<instruqt-completion text="You customized a live web server and validated your change with an automated check."></instruqt-completion>
